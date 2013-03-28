@@ -11,4 +11,4 @@ end
 
 gem 'jquery-rails'
 gem 'thin'
-gem 'debugger'
+gem 'omniauth-twitter'
