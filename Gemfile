@@ -12,3 +12,4 @@ end
 gem 'jquery-rails'
 gem 'thin'
 gem 'omniauth-twitter'
+gem 'parslet'
