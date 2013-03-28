@@ -1,0 +1,21 @@
+- if @user.present?
+  .user
+    h3= "Recent tweets from #{@user.name}"
+
+form.search-form.input-append method="get" action=search_path
+  input.span2 id="appendedInputButton" type="text" value=@term name="term"
+  button.btn type="submit" Search
+
+- @search_results.each do |tweet|
+  .tweet
+    .row
+      .span2.top style="background-image: url(#{tweet.user.profile_banner_url})"
+        .picture: .frame= image_tag tweet.user.profile_image_url
+
+      .span10.content
+        .name
+          = link_to tweet.user.name, search_path(term: "user:#{tweet.user.username}")
+          span &nbsp;at&nbsp;
+          = tweet.created_at.strftime('%r')
+
+        .text= TweetParser.parse(tweet.text).html_safe

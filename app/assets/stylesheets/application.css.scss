@@ -1,4 +1,8 @@
 /*
  *= require_self
- *= require_tree .
  */
+
+@import 'bootstrap';
+
+@import 'layout';
+@import 'tweets';

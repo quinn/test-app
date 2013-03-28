@@ -1,0 +1,28 @@
+.tweet {
+  background-color: #fff;
+  @include border-radius(10px);
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .top {
+    box-sizing: border-box;
+    padding: 60px 0;
+    text-align:center;
+  }
+
+  .picture {
+    display:inline-block;
+    border: 2px solid #fff;
+    @include border-radius(100px);
+    overflow:hidden;
+  }
+
+  .content {
+    box-sizing: border-box;
+    padding: 50px 40px 0 20px;
+  }
+}
+
+.search-form {
+  margin-bottom: 20px;
+}
